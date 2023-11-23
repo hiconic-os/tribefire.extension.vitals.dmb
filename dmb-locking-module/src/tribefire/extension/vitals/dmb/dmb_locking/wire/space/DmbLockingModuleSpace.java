@@ -12,9 +12,9 @@
 package tribefire.extension.vitals.dmb.dmb_locking.wire.space;
 
 import com.braintribe.exception.Exceptions;
+import com.braintribe.logging.Logger;
 import com.braintribe.model.processing.deployment.api.ExpertContext;
 import com.braintribe.model.processing.deployment.api.binding.DenotationBindingBuilder;
-import com.braintribe.model.processing.lock.api.LockingException;
 import com.braintribe.model.processing.lock.dmb.impl.DmbLockManager;
 import com.braintribe.wire.api.annotation.Import;
 import com.braintribe.wire.api.annotation.Managed;
@@ -30,6 +30,8 @@ import tribefire.module.wire.contract.TribefirePlatformContract;
 @Managed
 public class DmbLockingModuleSpace implements TribefireModuleContract {
 
+	private static final Logger log = Logger.getLogger(DmbLockingModuleSpace.class);
+
 	@Import
 	private TribefirePlatformContract tfPlatform;
 
@@ -38,9 +40,11 @@ public class DmbLockingModuleSpace implements TribefireModuleContract {
 
 	@Override
 	public void bindDeployables(DenotationBindingBuilder bindings) {
-		bindings.bind(DmbLocking.T) //
-				.component(clusterBinders.lockingManager()) //
-				.expertFactory(this::lockManager);
+		log.warn("LockManager is not supported, therefore having dmb-locking-module is pointless. No binding will be done.");
+		
+//		bindings.bind(DmbLocking.T) //
+//				.component(clusterBinders.lockingManager()) //
+//				.expertFactory(this::lockManager);
 	}
 
 	private DmbLockManager lockManager(ExpertContext<DmbLocking> expertContext) {
@@ -49,7 +53,7 @@ public class DmbLockingModuleSpace implements TribefireModuleContract {
 		DmbLockManager expert = null;
 		try {
 			expert = new DmbLockManager();
-		} catch (LockingException e) {
+		} catch (Exception e) {
 			throw Exceptions.unchecked(e,
 					"Cannot create an instance of lock manager: " + DmbLockManager.class.getName());
 		}

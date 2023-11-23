@@ -13,18 +13,18 @@ You should have received a copy of the GNU Lesser General Public License along w
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>tribefire.extension.vitals.dmb</groupId>
 	<artifactId>parent</artifactId>
-	<version>2.0.5</version>
+	<version>3.0.1</version>
 	<packaging>pom</packaging>
 	<properties>
 
         <java.version>1.8</java.version>
 
-		<V.tribefire.extension.vitals.dmb>[2.0,2.1)</V.tribefire.extension.vitals.dmb>
-        <V.com.braintribe.common>[1.0,1.1)</V.com.braintribe.common>
-        <V.com.braintribe.logging>[1.0,1.1)</V.com.braintribe.logging>
-        <V.com.braintribe.gm>[1.0,1.1)</V.com.braintribe.gm>
-        <V.com.braintribe.gm.testing>[1.0,1.1)</V.com.braintribe.gm.testing>
-        <V.tribefire.cortex>[2.0,2.1)</V.tribefire.cortex>
+		<V.tribefire.extension.vitals.dmb>[3.0,3.1)</V.tribefire.extension.vitals.dmb>
+        <V.com.braintribe.common>[2.0,2.1)</V.com.braintribe.common>
+        <V.com.braintribe.logging>[2.0,2.1)</V.com.braintribe.logging>
+        <V.com.braintribe.gm>[2.0,2.1)</V.com.braintribe.gm>
+        <V.com.braintribe.gm.testing>[2.0,2.1)</V.com.braintribe.gm.testing>
+        <V.tribefire.cortex>[3.0,3.1)</V.tribefire.cortex>
 	</properties>
     <licenses>
         <license>

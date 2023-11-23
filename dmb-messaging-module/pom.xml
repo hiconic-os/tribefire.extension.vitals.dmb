@@ -14,10 +14,10 @@ You should have received a copy of the GNU Lesser General Public License along w
 	<parent>
 		<groupId>tribefire.extension.vitals.dmb</groupId>
 		<artifactId>parent</artifactId>
-		<version>[2.0,2.1)</version>
+		<version>[3.0,3.1)</version>
 	</parent>
 	<artifactId>dmb-messaging-module</artifactId>
-	<version>2.0.8</version>
+	<version>3.0.1</version>
 	<properties>
 	</properties>
     <licenses>
@@ -31,14 +31,14 @@ You should have received a copy of the GNU Lesser General Public License along w
 	<dependencies>
 
         <dependency>
-            <groupId>com.braintribe.gm</groupId>
+            <groupId>tribefire.cortex</groupId>
             <artifactId>gm-dmb-messaging</artifactId>
-            <version>${V.com.braintribe.gm}</version>
+            <version>${V.tribefire.cortex}</version>
         </dependency>
         <dependency>
-            <groupId>com.braintribe.gm</groupId>
+            <groupId>tribefire.cortex</groupId>
             <artifactId>gm-dmb-messaging-model</artifactId>
-            <version>${V.com.braintribe.gm}</version>
+            <version>${V.tribefire.cortex}</version>
             <?tag asset?>
         </dependency>
 
